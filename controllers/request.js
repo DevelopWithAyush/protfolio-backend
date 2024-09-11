@@ -23,7 +23,6 @@ export const requestHandler = TryCatch(async (req, res, next) => {
 
 export const myRequestHandler = TryCatch(async (req, res, next) => {
   const existingRequest =await Request.findOne({ user: req.user });
-  console.log(existingRequest)
   if (!existingRequest) {
     res.status(200).json({ success: false, message: "not existing meeting" });
   } else {

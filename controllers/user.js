@@ -23,7 +23,6 @@ export const login = TryCatch(async (req, res, next) => {
 
 export const myprofile = TryCatch(async (req, res, next) => {
 
-  console.log("ay7uus")
   const user = await User.findById(req.user);
   if (!user) {
     return next(new ErrorHandler("User not found", 404));

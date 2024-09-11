@@ -11,13 +11,10 @@ import bodyParser from "body-parser";
 
 
 
-console.log(process.env.JWT_SECRET,"ay")
 const app = express()
 app.use(cors({
     origin: [
-        "http://localhost:5173",
         process.env.REACT_URL,
-        "https://rapid-frontend-six.vercel.app"
     ],
     credentials: true,
     
